@@ -84,33 +84,60 @@ class MbtiDetailScreen extends StatelessWidget {
                     child: SingleChildScrollView(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment:
+                            CrossAxisAlignment.stretch, // 設置為stretch以延伸子元素到最大寬度
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  '性格描述',
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
+                          // 性格描述卡片
+                          Card(
+                            color: Colors.white,
+                            elevation: 3,
+                            margin: const EdgeInsets.only(bottom: 16.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    '性格描述',
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 8.0),
-                                Text(mbtiType.description),
-                                const SizedBox(height: 16.0),
-                                const Text(
-                                  '最佳匹配',
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
+                                  const SizedBox(height: 8.0),
+                                  Text(mbtiType.description),
+                                ],
+                              ),
+                            ),
+                          ),
+
+                          // 最佳匹配卡片
+                          Card(
+                            color: Colors.white,
+                            elevation: 3,
+                            margin: const EdgeInsets.only(bottom: 16.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Text(
+                                    '最佳匹配',
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 8.0),
-                                Text(mbtiType.compatibility),
-                              ],
+                                  const SizedBox(height: 8.0),
+                                  Text(mbtiType.compatibility),
+                                ],
+                              ),
                             ),
                           ),
                         ],
@@ -121,21 +148,31 @@ class MbtiDetailScreen extends StatelessWidget {
                   // 優勢頁籤
                   Container(
                     color: lightBgColor,
-                    child: TraitList(traits: mbtiType.strengths, title: '優勢特質'),
+                    child: TraitList(
+                      traits: mbtiType.strengths,
+                      title: '優勢特質',
+                      mbtiType: mbtiType,
+                    ),
                   ),
 
                   // 劣勢頁籤
                   Container(
                     color: lightBgColor,
-                    child:
-                        TraitList(traits: mbtiType.weaknesses, title: '劣勢特質'),
+                    child: TraitList(
+                      traits: mbtiType.weaknesses,
+                      title: '劣勢特質',
+                      mbtiType: mbtiType,
+                    ),
                   ),
 
                   // 職業頁籤
                   Container(
                     color: lightBgColor,
-                    child:
-                        TraitList(traits: mbtiType.careerPaths, title: '適合職業'),
+                    child: TraitList(
+                      traits: mbtiType.careerPaths,
+                      title: '適合職業',
+                      mbtiType: mbtiType,
+                    ),
                   ),
                 ],
               ),

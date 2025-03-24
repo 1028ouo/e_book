@@ -1,74 +1,93 @@
 import 'package:flutter/material.dart';
+import '../models/mbti_type.dart';
 
 class TraitList extends StatelessWidget {
   final List<String> traits;
   final String title;
+  final MbtiType mbtiType;
 
   const TraitList({
     super.key,
     required this.traits,
     required this.title,
+    required this.mbtiType,
   });
 
-  // 根據MBTI型別返回顏色
-  Color getMbtiTypeColor(String code) {
-    // 分析型 (NT): INTJ, INTP, ENTJ, ENTP
-    if ((code.contains('NT'))) {
-      return const Color.fromARGB(255, 136, 97, 155); // 紫色代表分析型
-    }
-    // 外交型 (NF): INFJ, INFP, ENFJ, ENFP
-    else if (code.contains('NF')) {
-      return const Color.fromARGB(255, 51, 164, 116); // 綠色代表外交型
-    }
-    // 守衛型 (SJ): ISTJ, ISFJ, ESTJ, ESFJ
-    else if (code.contains('S') && code.contains('J')) {
-      return const Color.fromARGB(255, 66, 152, 180); // 藍色代表守衛型
-    }
-    // 探索型 (SP): ISTP, ISFP, ESTP, ESFP
-    else if (code.contains('S') && code.contains('P')) {
-      return const Color.fromARGB(255, 228, 174, 58); // 橙色代表探索型
+  // 根據MBTI類型返回對應的淺色調
+  Color _getListTileColorByType() {
+    String code = mbtiType.code;
+    if (code.contains('NT')) {
+      // 分析型：淺紫色
+      return const Color.fromARGB(255, 250, 250, 250);
+    } else if (code.contains('NF')) {
+      // 外交型：淺綠色
+      return const Color.fromARGB(255, 250, 255, 250);
+    } else if (code.contains('S') && code.contains('J')) {
+      // 管理型：淺藍色
+      return const Color.fromARGB(255, 250, 252, 255);
     } else {
-      return Colors.black; // 預設顏色
+      // 探險型：淺橙色
+      return const Color.fromARGB(255, 250, 253, 250);
+    }
+  }
+
+  Color _getIconColorByType() {
+    String code = mbtiType.code;
+    if (code.contains('NT')) {
+      // 分析型：淺紫色
+      return Colors.purple.shade900;
+    } else if (code.contains('NF')) {
+      // 外交型：淺綠色
+      return Colors.green.shade900;
+    } else if (code.contains('S') && code.contains('J')) {
+      // 管理型：淺藍色
+      return Colors.blue.shade900;
+    } else {
+      // 探險型：淺橙色
+      return Colors.yellow.shade900;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final typeColor = getMbtiTypeColor(title);
-    return Padding(
+    final tileColor = _getListTileColorByType();
+    final iconColor = _getIconColorByType();
+
+    return ListView.builder(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+      itemCount: traits.length + 1, // 加1是為了標題
+      itemBuilder: (ctx, index) {
+        if (index == 0) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 16.0, left: 8.0),
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          );
+        }
+
+        return Card(
+          elevation: 1.0,
+          margin: const EdgeInsets.only(bottom: 8.0),
+          child: ListTile(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            tileColor: tileColor,
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
+            title: Text(traits[index - 1]),
+            leading: Icon(
+              Icons.check_circle,
+              color: iconColor,
             ),
           ),
-          const SizedBox(height: 16.0),
-          Expanded(
-            child: ListView.builder(
-              itemCount: traits.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: const EdgeInsets.only(bottom: 8.0),
-                  child: Card(
-                    elevation: 2.0,
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        child: Text('${index + 1}'),
-                      ),
-                      title: Text(traits[index]),
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }
