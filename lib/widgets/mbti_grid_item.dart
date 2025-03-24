@@ -75,7 +75,7 @@ class MbtiGridItem extends StatelessWidget {
               // 顯示MBTI代碼，使用對應顏色
               Text(
                 mbtiType.code,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
                   color: Colors.black,

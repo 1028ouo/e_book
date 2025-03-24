@@ -3,6 +3,7 @@
     "code": "INTJ",
     "name": "建築師",
     "image": "assets/images/INTJ.png",
+    "cover": "assets/images/cover/INTJ_cover.png",
     "description": "INTJ型人格的人是稀有且獨特的，他們具有豐富的想像力和深刻的原創性，渴望不斷改進一切事物。他們以嚴謹的邏輯和戰略思考而著稱，能夠看到所有可能性並制定遠見卓識的計劃。",
     "strengths": [
       "具有戰略思維",
@@ -34,6 +35,7 @@
     "code": "INTP",
     "name": "邏輯學家",
     "image": "assets/images/INTP.png",
+    "cover": "assets/images/cover/INTP_cover.png",
     "description": "INTP型人格的人是創新者和發明家，他們具有豐富的想像力和卓越的分析能力。他們渴望理解事物如何運作，並通過深刻的洞察力來解決複雜問題。",
     "strengths": [
       "分析能力強",
@@ -65,6 +67,7 @@
     "code": "ENTJ",
     "name": "指揮官",
     "image": "assets/images/ENTJ.png",
+    "cover": "assets/images/cover/ENTJ_cover.png",
     "description": "ENTJ型人格的人是天生的領導者，他們擁有卓越的組織能力和執行力。他們能夠快速看清系統的效率和改進點，並帶領團隊走向成功。",
     "strengths": [
       "決策能力強",
@@ -96,6 +99,7 @@
     "code": "ENTP",
     "name": "辯論家",
     "image": "assets/images/ENTP.png",
+    "cover": "assets/images/cover/ENTP_cover.png",
     "description": "ENTP型人格的人喜歡挑戰常規思維，他們快速靈活的思考使他們成為出色的問題解決者和創新者。他們喜歡腦力激盪和辯論，始終尋找新的可能性。",
     "strengths": [
       "出色的溝通能力",
@@ -127,6 +131,7 @@
     "code": "INFJ",
     "name": "提倡者",
     "image": "assets/images/INFJ.png",
+    "cover": "assets/images/cover/INFJ_cover.png",
     "description": "INFJ型人格的人深具洞察力和原則性，他們是理想主義者和完美主義者。他們擁有清晰的遠見，致力於改善人類處境，並以獨特的方式看待世界。",
     "strengths": [
       "富有創意",
@@ -158,6 +163,7 @@
     "code": "INFP",
     "name": "調停者",
     "image": "assets/images/INFP.png",
+    "cover": "assets/images/cover/INFP_cover.png",
     "description": "INFP型人格的人是詩人和夢想家，他們以開放的心靈和溫柔的精神探索生活的意義。他們重視內心和諧，追求真正的幸福，並致力於幫助他人實現潛能。",
     "strengths": [
       "富有同情心",
@@ -189,6 +195,7 @@
     "code": "ENFJ",
     "name": "主人公",
     "image": "assets/images/ENFJ.png",
+    "cover": "assets/images/cover/ENFJ_cover.png",
     "description": "ENFJ型人格的人天生是領導者和鼓舞者，他們有著特殊的能力看到他人的潛力並幫助他們實現。他們關懷熱情，富有魅力，以尊重和欣賞的態度對待每個人。",
     "strengths": [
       "自然的領導者",
@@ -220,6 +227,7 @@
     "code": "ENFP",
     "name": "冒險家",
     "image": "assets/images/ENFP.png",
+    "cover": "assets/images/cover/ENFP_cover.png",
     "description": "ENFP型人格的人熱情洋溢且充滿可能性，他們對生活充滿好奇心，能看到周圍事物之間的聯繫。他們渴望體驗和理解一切，享受與人建立情感聯繫的過程。",
     "strengths": [
       "觀察力敏銳",
@@ -251,6 +259,7 @@
     "code": "ISTJ",
     "name": "物流師",
     "image": "assets/images/ISTJ.png",
+    "cover": "assets/images/cover/ISTJ_cover.png",
     "description": "ISTJ型人格的人實際、有條理且值得信賴，他們以嚴謹、負責和忠誠聞名。他們重視傳統和秩序，傾向於透過清晰的規則和標準來組織自己的生活和工作。",
     "strengths": [
       "誠實可靠",
@@ -282,6 +291,7 @@
     "code": "ISFJ",
     "name": "守衛者",
     "image": "assets/images/ISFJ.png",
+    "cover": "assets/images/cover/ISFJ_cover.png",
     "description": "ISFJ型人格的人謙遜且專注，他們以樂於助人和忠誠而聞名。他們關注細節，負責任，重視安全和穩定，致力於保護他人和維護傳統。",
     "strengths": [
       "支持他人",
@@ -313,6 +323,7 @@
     "code": "ESTJ",
     "name": "總經理",
     "image": "assets/images/ESTJ.png",
+    "cover": "assets/images/cover/ESTJ_cover.png",
     "description": "ESTJ型人格的人以組織能力和領導能力著稱，他們樂於遵守規則和程序，追求效率與結果。他們重視傳統、秩序和安全，願意承擔責任來確保工作完成。",
     "strengths": [
       "專注現實和實用",
@@ -344,6 +355,7 @@
     "code": "ESFJ",
     "name": "執政官",
     "image": "assets/images/ESFJ.png",
+    "cover": "assets/images/cover/ESFJ_cover.png",
     "description": "ESFJ型人格的人關懷照顧他人，樂於提供實際的幫助和服務。他們熱情、盡責並重視人際關係，致力於創造和諧與合作的環境，並遵循傳統價值觀。",
     "strengths": [
       "關心他人",
@@ -375,6 +387,7 @@
     "code": "ISTP",
     "name": "鑑賞家",
     "image": "assets/images/ISTP.png",
+    "cover": "assets/images/cover/ISTP_cover.png",
     "description": "ISTP型人格的人是冷靜的問題解決者，他們喜歡了解事物如何運作，並以實用和邏輯的方式應對挑戰。他們靈活而獨立，喜歡動手實踐而不是理論討論。",
     "strengths": [
       "樂觀和精力充沛",
@@ -406,6 +419,7 @@
     "code": "ISFP",
     "name": "探險家",
     "image": "assets/images/ISFP.png",
+    "cover": "assets/images/cover/ISFP_cover.png",
     "description": "ISFP型人格的人是真正的藝術家，他們富有同情心且和平主義，享受在當下生活並探索生活的美好。他們很靈活且有創意，常透過行動而非言語表達自己。",
     "strengths": [
       "敏銳的審美觀",
@@ -437,6 +451,7 @@
     "code": "ESTP",
     "name": "企業家",
     "image": "assets/images/ESTP.png",
+    "cover": "assets/images/cover/ESTP_cover.png",
     "description": "ESTP型人格的人是冒險家和實幹家，他們精力充沛，喜歡行動並解決問題。他們靈活且現實主義，享受與人互動，並專注於立即可見的結果。",
     "strengths": [
       "勇於冒險",
@@ -468,6 +483,7 @@
     "code": "ESFP",
     "name": "表演者",
     "image": "assets/images/ESFP.png",
+    "cover": "assets/images/cover/ESFP_cover.png",
     "description": "ESFP型人格的人是熱情的表演者，他們喜歡成為關注的焦點並活在當下。他們樂觀開朗，享受與人分享快樂，並以實際的方式幫助他人。",
     "strengths": [
       "大方且受歡迎",
