@@ -13,7 +13,6 @@ class AudioService {
 
   Future<void> initialize() async {
     if (!_isInitialized) {
-      // 請確保在assets資料夾中有background_music.mp3檔案
       await _audioPlayer.setAsset('assets/magic_forest.mp3');
       await _audioPlayer.setLoopMode(LoopMode.all);
       _isInitialized = true;
